@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap sur l'Espace - Classe le ciel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/entete.css">
+</head>
+<body>
+
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <h1>Classe le ciel</h1>
+    <p class="consigne">Fais glisser chaque image vers la bonne zone.</p>
+
+    <!-- The 6 images to sort -->
+    <section class="card" id="zone-images">
+      <h2>Objets célestes</h2>
+      <div class="bac-images" id="bac-images"></div>
+    </section>
+
+    <!-- The 2 containers -->
+    <section id="zone-conteneurs">
+      <div class="conteneur" data-zone="systeme">
+        <h2>☀️ Système solaire</h2>
+        <div class="contenu"></div>
+      </div>
+
+      <div class="conteneur" data-zone="audela">
+        <h2>🌌 Au-delà</h2>
+        <div class="contenu"></div>
+      </div>
+    </section>
+
+    <p id="message"></p>
+    <p id="score"></p>
+
+    <button type="button" id="btn-rejouer" class="btn">🔄 Recommencer</button>
+  </main>
+
+  <footer>Activité 2 - Cap sur l'Espace</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/dragdrop.js"></script>
+</body>
+</html>

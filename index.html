@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap sur l'Espace - Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/entete.css">
+</head>
+<body>
+
+  <header class="entete" id="entete"></header>
+
+  <main class="accueil">
+    <h1 class="neon">Explorons l'Univers</h1>
+
+    <div class="accueil-grille">
+
+      <!-- LEFT: welcome + animation -->
+      <div class="colonne-gauche">
+
+        <!-- Profile (filled by common.js) -->
+        <section class="card" id="profil">
+          <p>Bienvenue, futur astronaute !</p>
+        </section>
+
+        <!-- 3D card + animation -->
+        <section class="carte-3d" id="animation">
+          <div class="systeme">
+            <div class="etoiles" id="etoiles"></div>
+
+            <div class="soleil"></div>
+
+            <div class="orbite orbite-1"><div class="planete p-mercure"></div></div>
+            <div class="orbite orbite-2"><div class="planete p-terre"></div></div>
+            <div class="orbite orbite-3"><div class="planete p-mars"></div></div>
+            <div class="orbite orbite-4"><div class="planete p-saturne"></div></div>
+
+            <p class="texte-neon">Cap sur l'infini !</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT: video and music -->
+      <div class="colonne-droite">
+        <section class="card" id="media">
+          <h2>Mission en images</h2>
+          <video id="video" controls preload="metadata">
+            <source src="media/video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+          <p class="credit">Source de la vidéo : NASA</p>
+
+          <h2>Musique d'ambiance</h2>
+          <audio id="musique" loop preload="auto">
+            <source src="media/vangelis.mp3" type="audio/mpeg">
+          </audio>
+
+          <div class="lecteur">
+            <button type="button" id="btn-play" class="btn">▶ Play</button>
+            <button type="button" id="btn-stop" class="btn">⏹ Stop</button>
+            <button type="button" id="btn-mute" class="btn">🔊 Son</button>
+            <input type="range" id="progression" min="0" max="100" value="0">
+          </div>
+          
+        </section>
+      </div>
+
+    </div>
+
+    <div class="cta">
+      <a href="dragdrop.html" class="btn">Commencer le voyage</a>
+    </div>
+  </main>
+
+  <footer>Activité 2 - Cap sur l'Espace</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/accueil.js"></script>
+</body>
+</html>

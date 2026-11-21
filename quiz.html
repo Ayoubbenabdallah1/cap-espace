@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap sur l'Espace - Mission Astronaute</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/entete.css">
+</head>
+<body>
+
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <h1>Mission Astronaute</h1>
+
+    <section class="card" id="quiz">
+      <p id="dernier-score"></p>
+
+      <!-- Question screen -->
+      <div id="ecran-question">
+        <div class="barre"><div class="barre-remplie" id="barre"></div></div>
+        <p id="compteur"></p>
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <p id="explication"></p>
+        <button type="button" id="btn-suivant" class="btn cache">Question suivante ➜</button>
+      </div>
+
+      <!-- Result screen -->
+      <div id="ecran-resultat" class="cache">
+        <h2 id="message-final"></h2>
+        <p id="detail-final"></p>
+        <div class="actions">
+          <button type="button" id="btn-recommencer" class="btn">🔄 Refaire la mission</button>
+          <a href="pendu.html" class="btn">Jeu du pendu ➜</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Activité 2 - Cap sur l'Espace</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

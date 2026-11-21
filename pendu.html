@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cap sur l'Espace - Jeu du pendu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/entete.css">
+</head>
+<body>
+
+  <header class="entete" id="entete"></header>
+
+  <main>
+    <h1>Jeu du pendu</h1>
+
+    <section class="card" id="jeu">
+      <p id="dernier-score-pendu"></p>
+
+      <div class="zone-pendu">
+
+        <!-- Drawing: each part appears after a mistake -->
+        <svg id="dessin" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" aria-label="Dessin du pendu">
+          <!-- Gallows (always visible) -->
+          <line class="potence" x1="20"  y1="225" x2="120" y2="225"/>
+          <line class="potence" x1="70"  y1="225" x2="70"  y2="20"/>
+          <line class="potence" x1="70"  y1="20"  x2="140" y2="20"/>
+          <line class="potence" x1="140" y1="20"  x2="140" y2="50"/>
+
+          <!-- Body parts, in the order they appear -->
+          <circle class="partie" cx="140" cy="70" r="20"/>
+          <line class="partie" x1="140" y1="90"  x2="140" y2="150"/>
+          <line class="partie" x1="140" y1="105" x2="115" y2="132"/>
+          <line class="partie" x1="140" y1="105" x2="165" y2="132"/>
+          <line class="partie" x1="140" y1="150" x2="120" y2="190"/>
+          <line class="partie" x1="140" y1="150" x2="160" y2="190"/>
+        </svg>
+
+        <div class="infos-pendu">
+          <p id="mot"></p>
+          <p id="erreurs-restantes"></p>
+          <p id="message-pendu"></p>
+        </div>
+      </div>
+
+      <!-- Virtual keyboard (A to Z, created by JavaScript) -->
+      <div id="clavier"></div>
+
+      <button type="button" id="btn-rejouer-pendu" class="btn">🔄 Rejouer</button>
+    </section>
+  </main>
+
+  <footer>Activité 2 - Cap sur l'Espace</footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/pendu.js"></script>
+</body>
+</html>
